@@ -32,36 +32,30 @@ $(function() {
 // //exercise 3
 $(function(){
 
-  $("#container").on("click", function(event) {
-    console.log(event.pageX, event.pageY);
-  });
+  // $("#container").on("click", function(event) {
+  //   console.log(event.pageX, event.pageY);
+  // });
 
-  $(".boxType1").append('<a href="https://www.google.com">Galvanize</a>');
+  // $(".boxType1").append('<a href="https://www.google.com">Galvanize</a>');
 
-  $(".boxType1 a" ).on("click", function(event){
-    event.preventDefault();
-    alert("You cannot leave the page!");
-  });
+  // $(".boxType1 a" ).on("click", function(event){
+  //   event.preventDefault();
+  //   alert("You cannot leave the page!");
+  // });
 
-  $(window).on("unload", function(){
-    return false;//not working yet, use .wrap();
-  });
-
-  $(".box").on("click", function(){
-    if ($(this).has('img').length) {
-      $(this).find('img').remove();
-    }
-    else {
-      $(this).append('<img src="http://puppydogweb.com/gallery/puppies/labradorretriever2.jpg" alt="cute puppy" width="100%">');
-    }
-  });
+  // $(".box").on("click", function(){
+  //   if ($(this).has('img').length) {
+  //     $(this).find('img').remove();
+  //   }
+  //   else {
+  //     $(this).append('<img src="http://puppydogweb.com/gallery/puppies/labradorretriever2.jpg" alt="cute puppy" width="100%">');
+  //   }
+  // });
 
   var container = $('#container');
 
-//check if any boxes are white, if so revert to original, which is ""
-  if ($('.box').css('background', 'white'))
-
   container.on('click', function(event){
+    $('.box').removeAttr("style");
     if ($(event.target).is('.box')) {
       container.css('background', 'black');
       $(event.target).css('background', 'white');
