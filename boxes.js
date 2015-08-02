@@ -41,7 +41,7 @@ $(function(){
     event.preventDefault();
     alert("You cannot leave the page!");
   });
-//when an element with the box class is clicked, check to see if image, if not append image. Can also use prevent default.
+//when an element with the box class is clicked, check to see if image, if not append image. Can also use prevent default and toggleClass
 
   $(".box").on("click", function(){
     if ($(this).has('img').length) {
