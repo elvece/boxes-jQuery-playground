@@ -28,7 +28,7 @@ $(function() {
 });
 
 
-// //exercise 3
+//exercise 3
 $(function(){
 //when the container div is clicked, log the location of the mouse
   $("#container").on("click", function(event) {
@@ -41,7 +41,8 @@ $(function(){
     event.preventDefault();
     alert("You cannot leave the page!");
   });
-//when an element with the box class is clicked,
+//when an element with the box class is clicked, check to see if image, if not append image. Can also use prevent default.
+
   $(".box").on("click", function(){
     if ($(this).has('img').length) {
       $(this).find('img').remove();
